@@ -3,7 +3,8 @@ const ApiResponse = require("../utils/ApiResponse");
 
 const getBranchController = async (req, res, next) => {
   try {
-    const { search = "" } = req.query;
+    // this is an object so you need to use colon not "=" 
+    const { search : "" } = req.query;
 
     const branches = await Branch.find({
       $or: [
